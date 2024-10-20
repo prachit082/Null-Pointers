@@ -94,7 +94,7 @@ import { CardComponent } from './card.component';
           </div>
         </div>
       </form>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mx-auto mt-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto mt-4">
         @for (item of cardData; track $index) {
         <app-card
           [cardTitle]="item.cardTitle"
