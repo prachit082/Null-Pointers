@@ -3,7 +3,8 @@
   <h1 class="text-xl font-semibold">Leaderboard</h1>
 
   <div class="w-full">
-    <div class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white ml-4">
+    <div class="flex items-center justify-end
+     flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white ml-4">
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative items-center">
             <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -14,8 +15,8 @@
             <input type="text" id="table-search-users" class="block pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-slate-20">
         </div>
     </div>
-    <table class="w-[940px] text-xs text-left rtl:text-right text-black shadow-md">
-        <thead class="text-xs text-gray-700 uppercase bg-slate-100">
+    <table class="w-full text-xs text-left rtl:text-right text-black shadow-md border">
+        <thead class="text-xs text-gray-700 uppercase bg-accent">
             <tr>
                 <th scope="col" class="p-4">
                     Name
