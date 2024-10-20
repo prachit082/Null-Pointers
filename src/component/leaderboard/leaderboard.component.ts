@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './leaderboard.component.html',
-  styleUrl: './leaderboard.component.css'
+  styleUrls: ['../../styles.css']
 })
 export class LeaderboardComponent {
 
