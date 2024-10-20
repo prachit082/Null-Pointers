@@ -164,6 +164,26 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                 <span class="flex-1 ms-3 whitespace-nowrap">Leaderboard</span>
               </a>
             </li>
+            <li>
+              <a
+                href="/progress-tracker"
+                class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Progresstracker</span
+                >
+              </a>
+            </li>
           </ul>
         </div>
       </aside>
