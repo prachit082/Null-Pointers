@@ -4,7 +4,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   template: `
     <div class="container">
       <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
@@ -77,10 +77,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                   <ul class="py-1" role="none">
                     <li>
                       <a
-                        href="#"
+                        routerLink="/home"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                         role="menuitem"
-                        >Dashboard</a
+                        >Home</a
                       >
                     </li>
                     <li>
@@ -124,7 +124,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           <ul class="space-y-2 font-medium">
             <li>
               <a
-                href="#"
+                routerLink="/home"
+                routerLinkActive="text-green-500"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
               >
                 <svg
@@ -141,7 +142,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                     d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
                   />
                 </svg>
-                <span class="ms-3">Dashboard</span>
+                <span class="ms-3">Home</span>
               </a>
             </li>
             <li>
