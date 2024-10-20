@@ -21,8 +21,8 @@ import { RouterLink } from '@angular/router';
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {{ cardDescription() }}
         </p>
+        <!-- routerLink="{{ cardLink() }}" -->
         <a
-          routerLink="{{ cardLink() }}"
           class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-accent/75 rounded-lg"
         >
           Read more

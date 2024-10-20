@@ -2,7 +2,7 @@
   <h2 class="text-xl font-semibold mb-2">Your Sustainability Progress</h2>
 
   <!-- Progress Bar -->
-  <div class="relative pt-1 mb-6">
+  <div class="relative pt-1 mt-4 mb-6">
     <div class="flex mb-2 items-center justify-between">
       <span
         class="text-sm font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200"
@@ -25,16 +25,25 @@
   <div class="flex justify-center space-x-4 mt-4">
     <button
       (click)="incrementProgress(10)"
-      class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+      type="button"
+      class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
     >
       +10 Actions
     </button>
     <button
       (click)="incrementProgress(20)"
-      class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+      type="button"
+      class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
     >
       +20 Actions
     </button>
+
+    <!-- <button
+      (click)="incrementProgress(20)"
+      class="bg-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+    >
+      +20 Actions
+    </button> -->
   </div>
 
   <!-- Line Chart for Progress Over Time -->
@@ -158,7 +167,7 @@
   </div>
 
   <!-- Increment Buttons for Electric Usage, Recycled Waste, Water Usage, and CO2 Emissions -->
-  <div class="flex justify-center space-x-4 mt-4">
+  <!-- <div class="flex justify-center space-x-4 mt-4">
     <button
       (click)="incrementElectricUsage(10)"
       class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
@@ -183,5 +192,5 @@
     >
       +20 kg CO2 Emissions Reduced
     </button>
-  </div>
+  </div> -->
 </div>
