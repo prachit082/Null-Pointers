@@ -1,0 +1,69 @@
+<div class="container">
+  <h1 class="text-xl font-semibold mb-4">Achievements</h1>
+
+  <!-- Grid for achievements -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <!-- Iterate through achievements -->
+    <div
+      *ngFor="let achievement of achievements"
+      class="p-6 bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+    >
+      <!-- Title and description for each achievement -->
+      <h2 class="text-2xl font-semibold text-gray-700 mb-4">
+        {{ achievement.title }}
+      </h2>
+      <p class="text-gray-600 mb-4">{{ achievement.description }}</p>
+
+      <!-- Iterate through badge tiers within each achievement -->
+      <div
+        *ngFor="let tier of achievement.badgeTiers"
+        class="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 mb-3 pb-3"
+      >
+        <!-- Display badge level, requirement, and medal -->
+        <div class="flex items-center space-x-4">
+          <span class="font-medium text-gray-700">{{ tier.level }}</span>
+          <span class="text-gray-500">- {{ tier.requirement }}</span>
+
+          <!-- Medal Display -->
+          <ng-container [ngSwitch]="tier.medal">
+            <img
+              *ngSwitchCase="'bronze'"
+              src="bronze.png"
+              alt="Bronze Medal"
+              class="w-6 h-6"
+            />
+            <img
+              *ngSwitchCase="'silver'"
+              src="silver.png"
+              alt="Silver Medal"
+              class="w-6 h-6"
+            />
+            <img
+              *ngSwitchCase="'gold'"
+              src="gold.png"
+              alt="Gold Medal"
+              class="w-6 h-6"
+            />
+          </ng-container>
+        </div>
+
+        <!-- Show if the badge is achieved or not -->
+        <div>
+          <span *ngIf="tier.isAchieved" class="text-green-500 font-semibold"
+            >Achieved</span
+          >
+          <span *ngIf="!tier.isAchieved" class="text-gray-400"
+            >Not Achieved</span
+          >
+        </div>
+      </div>
+
+      <!-- Use ng-container to handle multiple structural directives -->
+      <ng-container *ngFor="let tier of achievement.badgeTiers">
+        <div *ngIf="tier.isAchieved" class="mt-4 text-green-600">
+          <span class="animate-bounce">🎉 Badge Unlocked!</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

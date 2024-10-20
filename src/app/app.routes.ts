@@ -20,4 +20,11 @@ export const routes: Routes = [
         (m) => m.ProgressTrackerComponent
       ),
   },
+  {
+    path: 'achievements',
+    loadComponent: () =>
+      import('../component/achievements/achievements.component').then(
+        (m) => m.AchievementsComponent
+      ),
+  },
 ];
