@@ -123,7 +123,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         [ngClass]="showSidebar ? 'translate-x-0' : '-translate-x-full'"
         aria-label="Sidebar"
       >
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+        <div class="h-full px-3 pb-4 overflow-x-auto overflow-y-auto bg-white">
           <ul class="space-y-2 font-medium">
             <li>
               <a
