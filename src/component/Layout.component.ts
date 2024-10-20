@@ -128,6 +128,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             <li>
               <a
                 routerLink="/"
+                (click)="toogleMenu()"
                 routerLinkActive="text-green-500"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
               >
@@ -151,6 +152,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             <li>
               <a
                 routerLink="/leaderboard"
+                (click)="toogleMenu()"
                 class="flex items-center p-2 text-slate-900 rounded-lg  hover:bg-gray-100  group"
               >
                 <svg
@@ -173,6 +175,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
               <a
                 routerLink="/progress-tracker"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
+                (click)="toogleMenu()"
               >
                 <svg
                   class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
@@ -193,6 +196,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
               <a
                 routerLink="/achievements"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
+                (click)="toogleMenu()"
               >
                 <svg
                   class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
