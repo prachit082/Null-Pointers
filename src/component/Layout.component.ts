@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, NgClass],
   template: `
     <div class="container">
       <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
@@ -12,6 +13,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
               <button
+                (click)="toogleMenu()"
                 data-drawer-target="logo-sidebar"
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
@@ -117,7 +119,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 sm:translate-x-0"
+        [ngClass]="showSidebar ? 'translate-x-0' : '-translate-x-full'"
         aria-label="Sidebar"
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
@@ -197,4 +200,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     </div>
   `,
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  showSidebar = false;
+  toogleMenu() {
+    this.showSidebar = !this.showSidebar;
+  }
+}
