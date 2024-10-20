@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, NgClass],
   template: `
     <div class="container">
       <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 ">
@@ -12,6 +13,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end">
               <button
+                (click)="toogleMenu()"
                 data-drawer-target="logo-sidebar"
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
@@ -77,10 +79,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                   <ul class="py-1" role="none">
                     <li>
                       <a
-                        href="#"
+                        routerLink="/home"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                         role="menuitem"
-                        >Dashboard</a
+                        >Home</a
                       >
                     </li>
                     <li>
@@ -117,14 +119,16 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 sm:translate-x-0"
+        [ngClass]="showSidebar ? 'translate-x-0' : '-translate-x-full'"
         aria-label="Sidebar"
       >
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
           <ul class="space-y-2 font-medium">
             <li>
               <a
-                href="#"
+                routerLink="/home"
+                routerLinkActive="text-green-500"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
               >
                 <svg
@@ -141,7 +145,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                     d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
                   />
                 </svg>
-                <span class="ms-3">Dashboard</span>
+                <span class="ms-3">Home</span>
               </a>
             </li>
             <li>
@@ -163,6 +167,26 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                 <span class="flex-1 ms-3 whitespace-nowrap">Leaderboard</span>
               </a>
             </li>
+            <li>
+              <a
+                routerLink="/progress-tracker"
+                class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Progresstracker</span
+                >
+              </a>
+            </li>
           </ul>
         </div>
       </aside>
@@ -176,4 +200,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     </div>
   `,
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  showSidebar = false;
+  toogleMenu() {
+    this.showSidebar = !this.showSidebar;
+  }
+}
