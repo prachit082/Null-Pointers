@@ -25,6 +25,7 @@ export class ProgressTrackerComponent {
   co2Emissions: number[] = [100, 200, 300, 400]; // CO2 emissions in kg
 
   // Chart data for Trees Planted Over Time
+  // Chart data for Trees Planted Over Time
   public treeData = [
     {
       name: 'Trees Planted',
@@ -33,6 +34,9 @@ export class ProgressTrackerComponent {
         { name: 'Day 2', value: 10 },
         { name: 'Day 3', value: 15 },
         { name: 'Day 4', value: 20 },
+        { name: 'Day 5', value: 25 }, // New data
+        { name: 'Day 6', value: 30 }, // New data
+        { name: 'Day 7', value: 35 }, // New data
       ],
     },
   ];
@@ -46,6 +50,9 @@ export class ProgressTrackerComponent {
         { name: 'Day 2', value: 100 },
         { name: 'Day 3', value: 150 },
         { name: 'Day 4', value: 200 },
+        { name: 'Day 5', value: 250 }, // New data
+        { name: 'Day 6', value: 300 }, // New data
+        { name: 'Day 7', value: 350 }, // New data
       ],
     },
   ];
@@ -59,6 +66,9 @@ export class ProgressTrackerComponent {
         { name: 'Day 2', value: 60 },
         { name: 'Day 3', value: 90 },
         { name: 'Day 4', value: 120 },
+        { name: 'Day 5', value: 150 }, // New data
+        { name: 'Day 6', value: 180 }, // New data
+        { name: 'Day 7', value: 210 }, // New data
       ],
     },
   ];
@@ -72,6 +82,9 @@ export class ProgressTrackerComponent {
         { name: 'Day 2', value: 15 },
         { name: 'Day 3', value: 25 },
         { name: 'Day 4', value: 35 },
+        { name: 'Day 5', value: 45 }, // New data
+        { name: 'Day 6', value: 55 }, // New data
+        { name: 'Day 7', value: 65 }, // New data
       ],
     },
   ];
@@ -85,6 +98,9 @@ export class ProgressTrackerComponent {
         { name: 'Day 2', value: 200 },
         { name: 'Day 3', value: 300 },
         { name: 'Day 4', value: 400 },
+        { name: 'Day 5', value: 500 }, // New data
+        { name: 'Day 6', value: 600 }, // New data
+        { name: 'Day 7', value: 700 }, // New data
       ],
     },
   ];
