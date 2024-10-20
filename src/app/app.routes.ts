@@ -2,9 +2,16 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: 'home',
+    loadComponent: () =>
+      import('../component/home.component').then((m) => m.HomeComponent),
+  },
+  {
     path: 'leaderboard',
     loadComponent: () =>
-      import('../component/leaderboard/leaderboard.component').then((m) => m.LeaderboardComponent),
+      import('../component/leaderboard/leaderboard.component').then(
+        (m) => m.LeaderboardComponent
+      ),
   },
   {
     path: 'progress-tracker',
