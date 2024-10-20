@@ -1,5 +1,6 @@
-<div>
-  <h2 class="text-xl font-semibold mb-2">Progress Tracker</h2>
+<div class="max-w-screen-lg mx-auto lg:mx-0 p-4">
+  <!-- Progress Tracker Title -->
+  <h2 class="text-xl font-semibold mb-4">Progress Tracker</h2>
 
   <!-- Progress Bar -->
   <div class="relative pt-1 mt-4 mb-6">
@@ -22,52 +23,25 @@
   </div>
 
   <!-- Increment Progress Buttons -->
-  <div class="flex justify-center space-x-4 mt-4">
+  <div class="flex flex-wrap justify-center lg:justify-start space-x-4 mt-4">
     <button
       (click)="incrementProgress(10)"
       type="button"
-      class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
+      class="text-white bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none dark:focus:ring-green-800"
     >
       +10 Actions
     </button>
     <button
       (click)="incrementProgress(20)"
       type="button"
-      class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800"
+      class="text-white bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none dark:focus:ring-green-800"
     >
       +20 Actions
     </button>
-
-    <!-- <button
-      (click)="incrementProgress(20)"
-      class="bg-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-    >
-      +20 Actions
-    </button> -->
   </div>
 
-  <!-- Line Chart for Progress Over Time -->
-  <!-- <div class="mt-6">
-    <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
-      Progress Over Time
-    </h3>
-    <ngx-charts-line-chart
-      [scheme]="'cool'"
-      [results]="progressData"
-      [xAxis]="true"
-      [yAxis]="true"
-      [legend]="true"
-      [showXAxisLabel]="true"
-      [xAxisLabel]="'Days'"
-      [showYAxisLabel]="true"
-      [yAxisLabel]="'Progress'"
-      class="mb-6"
-    >
-    </ngx-charts-line-chart>
-  </div> -->
-
   <!-- Line Chart for Trees Planted -->
-  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow">
+  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow-md">
     <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
       Trees Planted Over Time
     </h3>
@@ -81,13 +55,13 @@
       [xAxisLabel]="'Days'"
       [showYAxisLabel]="true"
       [yAxisLabel]="'Trees Planted'"
-      class="mb-6"
+      class="mb-6 w-full"
     >
     </ngx-charts-line-chart>
   </div>
 
   <!-- Line Chart for Water Usage -->
-  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow">
+  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow-md">
     <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
       Water Usage Reduction (Liters) Over Time
     </h3>
@@ -101,13 +75,13 @@
       [xAxisLabel]="'Days'"
       [showYAxisLabel]="true"
       [yAxisLabel]="'Liters'"
-      class="mb-6"
+      class="mb-6 w-full"
     >
     </ngx-charts-line-chart>
   </div>
 
   <!-- Line Chart for Electric Usage -->
-  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow">
+  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow-md">
     <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
       Electric Usage (kWh) Over Time
     </h3>
@@ -121,13 +95,13 @@
       [xAxisLabel]="'Days'"
       [showYAxisLabel]="true"
       [yAxisLabel]="'kWh'"
-      class="mb-6"
+      class="mb-6 w-full"
     >
     </ngx-charts-line-chart>
   </div>
 
   <!-- Line Chart for Recycled Waste -->
-  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow">
+  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow-md">
     <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
       Recycled Waste (kg) Over Time
     </h3>
@@ -141,13 +115,13 @@
       [xAxisLabel]="'Days'"
       [showYAxisLabel]="true"
       [yAxisLabel]="'kg'"
-      class="mb-6"
+      class="mb-6 w-full"
     >
     </ngx-charts-line-chart>
   </div>
 
   <!-- Line Chart for CO2 Emissions -->
-  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow">
+  <div class="mt-6 p-2 bg-white border border-gray-200 rounded-lg shadow-md">
     <h3 class="text-lg font-semibold text-center mb-4 text-gray-800">
       CO2 Emissions (kg) Over Time
     </h3>
@@ -161,36 +135,8 @@
       [xAxisLabel]="'Days'"
       [showYAxisLabel]="true"
       [yAxisLabel]="'kg'"
-      class="mb-6"
+      class="mb-6 w-full"
     >
     </ngx-charts-line-chart>
   </div>
-
-  <!-- Increment Buttons for Electric Usage, Recycled Waste, Water Usage, and CO2 Emissions -->
-  <!-- <div class="flex justify-center space-x-4 mt-4">
-    <button
-      (click)="incrementElectricUsage(10)"
-      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-    >
-      +10 kWh Electric Usage
-    </button>
-    <button
-      (click)="incrementRecycleWaste(5)"
-      class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-    >
-      +5 kg Recycled Waste
-    </button>
-    <button
-      (click)="incrementWaterReduction(50)"
-      class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-    >
-      +50 Liters Water Saved
-    </button>
-    <button
-      (click)="incrementCO2Emissions(20)"
-      class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-    >
-      +20 kg CO2 Emissions Reduced
-    </button>
-  </div> -->
 </div>

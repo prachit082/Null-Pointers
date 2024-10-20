@@ -150,7 +150,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             </li>
             <li>
               <a
-                href="/leaderboard"
+                routerLink="/leaderboard"
                 class="flex items-center p-2 text-slate-900 rounded-lg  hover:bg-gray-100  group"
               >
                 <svg
@@ -185,13 +185,13 @@ import { RouterLink, RouterOutlet } from '@angular/router';
                   />
                 </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap"
-                  >Progresstracker</span
+                  >Progress Tracker</span
                 >
               </a>
             </li>
             <li>
               <a
-                href="/achievements"
+                routerLink="/achievements"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
               >
                 <svg
