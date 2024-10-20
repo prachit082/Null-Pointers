@@ -127,7 +127,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           <ul class="space-y-2 font-medium">
             <li>
               <a
-                routerLink="/home"
+                routerLink="/"
                 routerLinkActive="text-green-500"
                 class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group"
               >
