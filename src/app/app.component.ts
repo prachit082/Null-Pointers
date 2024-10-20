@@ -10,5 +10,5 @@ import { LayoutComponent } from '../component/Layout.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ento';
+  title = 'Environmenttal Sustainability';
 }

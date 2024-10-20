@@ -1,0 +1,14 @@
+/* Custom styles for achievement badge unlock animation */
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
